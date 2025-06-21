@@ -12,7 +12,7 @@ export function StockChart({ data, symbol }: StockChartProps) {
     .reverse()
     .map((item) => ({
       date: new Date(item.date).toLocaleDateString(),
-      price: Number.parseFloat(item.close),
+      price: item.close,
       volume: item.volume,
     }))
 
